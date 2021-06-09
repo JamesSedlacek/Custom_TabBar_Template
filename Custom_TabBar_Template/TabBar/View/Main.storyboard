@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFD-sf-SX8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab BarVC-->
+        <scene sceneID="Wg7-O5-9qe">
+            <objects>
+                <viewController id="tFD-sf-SX8" customClass="TabBarVC" customModule="Custom_TabBar_Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H3y-wB-1ef">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hu-ar-zaZ" userLabel="TabBarView">
+                                <rect key="frame" x="0.0" y="805" width="414" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="27S-ve-yye"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="ZLR-0X-l74" kind="embed" identifier="SegueToRoot" id="gwf-pK-vQQ"/>
+                                </connections>
+                            </containerView>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dln-Fq-Ojq" userLabel="PresentingView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="789"/>
+                                <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                <connections>
+                                    <segue destination="1DB-Qa-5BA" kind="embed" identifier="SegueToList" id="Qnf-MU-zX6"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2ED-Ha-Uk9"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="1hu-ar-zaZ" secondAttribute="bottom" id="1xl-f9-gcY"/>
+                            <constraint firstItem="2ED-Ha-Uk9" firstAttribute="trailing" secondItem="1hu-ar-zaZ" secondAttribute="trailing" id="8qX-bQ-gZD"/>
+                            <constraint firstItem="1hu-ar-zaZ" firstAttribute="leading" secondItem="2ED-Ha-Uk9" secondAttribute="leading" id="nkg-ql-Iud"/>
+                            <constraint firstItem="Dln-Fq-Ojq" firstAttribute="leading" secondItem="2ED-Ha-Uk9" secondAttribute="leading" id="p6l-fv-K9U"/>
+                            <constraint firstItem="Dln-Fq-Ojq" firstAttribute="trailing" secondItem="2ED-Ha-Uk9" secondAttribute="trailing" id="pxr-8K-Btk"/>
+                            <constraint firstItem="Dln-Fq-Ojq" firstAttribute="top" secondItem="H3y-wB-1ef" secondAttribute="top" id="rhn-2R-Ae8"/>
+                            <constraint firstItem="1hu-ar-zaZ" firstAttribute="top" secondItem="Dln-Fq-Ojq" secondAttribute="bottom" constant="16" id="xA7-IO-knY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PresentingView" destination="Dln-Fq-Ojq" id="Chh-Pn-Pp2"/>
+                        <outlet property="bottomConstraint" destination="1xl-f9-gcY" id="XBM-gF-ETL"/>
+                        <outlet property="bottomStack" destination="Tju-6u-jal" id="xii-KQ-LcE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbE-FQ-1WG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="96"/>
+        </scene>
+        <!--Root TabVC-->
+        <scene sceneID="nJc-8Z-pRN">
+            <objects>
+                <viewController id="ZLR-0X-l74" customClass="RootTabVC" customModule="Custom_TabBar_Template" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="epP-Ux-QbP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-Rh-1oe">
+                                <rect key="frame" x="12" y="0.0" width="390" height="57"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tju-6u-jal">
+                                        <rect key="frame" x="16" y="5" width="358" height="47"/>
+                                        <color key="backgroundColor" name="TabBarColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="47" id="2sb-jc-zGW"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="TabBarColor"/>
+                                <constraints>
+                                    <constraint firstItem="Tju-6u-jal" firstAttribute="leading" secondItem="sBS-Rh-1oe" secondAttribute="leading" constant="16" id="6gK-2g-lVX"/>
+                                    <constraint firstItem="Tju-6u-jal" firstAttribute="top" secondItem="sBS-Rh-1oe" secondAttribute="top" constant="5" id="ClK-Ut-ceI"/>
+                                    <constraint firstAttribute="bottom" secondItem="Tju-6u-jal" secondAttribute="bottom" constant="5" id="dvV-bc-VhV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tju-6u-jal" secondAttribute="trailing" constant="16" id="fSU-6T-FFz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y6K-eO-UEo"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sBS-Rh-1oe" firstAttribute="top" secondItem="epP-Ux-QbP" secondAttribute="top" id="6ic-k4-9C8"/>
+                            <constraint firstAttribute="bottom" secondItem="sBS-Rh-1oe" secondAttribute="bottom" id="bN3-Nb-ico"/>
+                            <constraint firstAttribute="trailing" secondItem="sBS-Rh-1oe" secondAttribute="trailing" constant="12" id="cQj-s7-4zy"/>
+                            <constraint firstItem="sBS-Rh-1oe" firstAttribute="leading" secondItem="y6K-eO-UEo" secondAttribute="leading" constant="12" id="wH3-jN-dIy"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backgroundView" destination="sBS-Rh-1oe" id="5Xa-hF-8cB"/>
+                        <outlet property="tabBarStackView" destination="Tju-6u-jal" id="9co-Ey-P4U"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iKD-Ep-isI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-6" y="454"/>
+        </scene>
+        <!--List-->
+        <scene sceneID="1jv-0S-R3O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="List" id="1DB-Qa-5BA" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Psv-Dx-dXN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="449" y="96"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="BackgroundColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="TabBarColor">
+            <color red="0.14300000667572021" green="0.14300000667572021" blue="0.16599999368190765" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
