@@ -7,7 +7,7 @@
     Fork, Clone, or Download the code from this Repo, then have fun customizing the tab bar.
   </p>
   
-</div>
+</div><br>
 
 <div>
   <h2>Table of Contents</h2>
@@ -26,6 +26,7 @@
         <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#Configure">Configure</a></li>
         <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#Delegate">Delegate</a></li>
       </ul>
+    <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#help-and-support">Help & Support</a></li>
   </ul>
 </div><br><br>
 
@@ -78,4 +79,9 @@
   <h3>Delegate</h3>
   <p>Expanation of how to edit this file</p>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/Delegate.png">
-</div>
+</div><br><br>
+
+<div>
+  <h2>Help & Support</h2><br>
+  <p>Feel free to contact me on LinkedIn if you need help with anything.</p>
+</div><br>
