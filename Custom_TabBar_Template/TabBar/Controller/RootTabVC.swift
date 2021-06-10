@@ -14,7 +14,7 @@ class RootTabVC: UIViewController {
         
     lazy var tabs: [TabBarItemView] = {
         var items = [TabBarItemView]()
-        for _ in 0..<4 {
+        for _ in 0..<K.Numbers.tabCount {
             items.append(TabBarItemView.newInstance)
         }
         return items

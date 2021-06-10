@@ -35,6 +35,12 @@ struct K {
         static let settings = UIImage(systemName: "gearshape")
     }
     
+    // MARK: - Numbers
+    
+    struct Numbers {
+        static let tabCount = 4
+    }
+    
     // MARK: - Tab Bar
     
     enum tab: String {
