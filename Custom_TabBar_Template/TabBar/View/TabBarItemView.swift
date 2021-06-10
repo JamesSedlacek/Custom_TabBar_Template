@@ -12,7 +12,10 @@ class TabBarItemView: UIView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
-    @IBOutlet weak var backgroundView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var imageHeight: NSLayoutConstraint!
+    @IBOutlet weak var imageWidth: NSLayoutConstraint!
     
     // MARK: - Variables
     
@@ -52,22 +55,22 @@ class TabBarItemView: UIView {
         self.isSelected = model.isSelected
         
         // MARK: - Title Label
-        self.titleLabel.text = model.title
+        self.titleLabel.text = isSelected ? model.title : ""
         self.titleLabel.textColor = K.Colors.selected
         self.titleLabel.numberOfLines = 1
-        self.titleLabel.sizeToFit()
-        self.titleLabel.lineBreakMode = .byWordWrapping
+        self.titleLabel.adjustsFontSizeToFitWidth = true
         
         // MARK: - ImageView
         self.imgView.image = model.image
         self.imgView.tintColor = isSelected ? K.Colors.selected : K.Colors.unselected
-
-        // MARK: - Self
-        self.layer.borderColor = isSelected ? K.Colors.selected.cgColor : K.Colors.unselectedBorder
-        self.backgroundColor = K.Colors.tabBackground
-        self.frame.size.height = 30
-        self.layer.cornerRadius = 20
-        self.layer.borderWidth = 2
+        self.imageWidth.constant = UIDevice.current.hasNotch ? 30 : 25
+        self.imageHeight.constant = UIDevice.current.hasNotch ? 30 : 25
+        
+        // MARK: - Content View
+        self.contentView.layer.cornerRadius = self.contentView.frame.height / 2
+        self.contentView.clipsToBounds = false
+        self.contentView.layer.borderWidth = 2
+        self.contentView.layer.borderColor = isSelected ? K.Colors.selected.cgColor : K.Colors.unselectedBorder
     }
     
     private func updateUI(isSelected: Bool) {
@@ -85,7 +88,7 @@ class TabBarItemView: UIView {
                        animations: {
             self.titleLabel.text = isSelected ? model.title : ""
             self.imgView.tintColor = isSelected ? K.Colors.selected : K.Colors.unselected
-            self.layer.borderColor = isSelected ? K.Colors.selected.cgColor : K.Colors.unselectedBorder
+            self.contentView.layer.borderColor = isSelected ? K.Colors.selected.cgColor : K.Colors.unselectedBorder
             (self.superview as? UIStackView)?.layoutIfNeeded()
         }, completion: nil)
     }

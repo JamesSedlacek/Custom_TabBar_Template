@@ -18,7 +18,7 @@
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
-                            <tableViewSection id="gC6-z7-f4W">
+                            <tableViewSection id="gC6-z7-f4W" userLabel="About Section">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="icH-yS-Jcp">
                                         <rect key="frame" x="20" y="1" width="374" height="60"/>
@@ -107,7 +107,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Sbz-a5-G2n">
+                            <tableViewSection id="Sbz-a5-G2n" userLabel="General Section">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Rte-xE-upw">
                                         <rect key="frame" x="20" y="167" width="374" height="60"/>
@@ -174,7 +174,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="aFo-dd-wJ5">
+                            <tableViewSection id="aFo-dd-wJ5" userLabel="FAQ Section">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="4sN-xR-r1N">
                                         <rect key="frame" x="20" y="289.5" width="374" height="60"/>
@@ -241,7 +241,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="Zak-tx-rNT">
+                            <tableViewSection id="Zak-tx-rNT" userLabel="Contact Section">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Iev-n1-URm">
                                         <rect key="frame" x="20" y="412" width="374" height="60"/>
@@ -309,7 +309,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection id="rRO-E0-7I0">
+                            <tableViewSection id="rRO-E0-7I0" userLabel="Legal Section">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="60" id="Wyu-F5-KKG">
                                         <rect key="frame" x="20" y="534.5" width="374" height="60"/>

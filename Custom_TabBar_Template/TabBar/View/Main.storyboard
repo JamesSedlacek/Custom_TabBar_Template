@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tFD-sf-SX8">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,11 +14,11 @@
             <objects>
                 <viewController id="tFD-sf-SX8" customClass="TabBarVC" customModule="Custom_TabBar_Template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H3y-wB-1ef">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1hu-ar-zaZ" userLabel="TabBarView">
-                                <rect key="frame" x="0.0" y="805" width="414" height="57"/>
+                                <rect key="frame" x="0.0" y="610" width="375" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="57" id="27S-ve-yye"/>
                                 </constraints>
@@ -27,7 +27,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dln-Fq-Ojq" userLabel="PresentingView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="789"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
                                 <color key="backgroundColor" systemColor="systemGrayColor"/>
                                 <connections>
                                     <segue destination="1DB-Qa-5BA" kind="embed" identifier="SegueToList" id="Qnf-MU-zX6"/>
@@ -61,14 +61,14 @@
             <objects>
                 <viewController id="ZLR-0X-l74" customClass="RootTabVC" customModule="Custom_TabBar_Template" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="epP-Ux-QbP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="57"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-Rh-1oe">
-                                <rect key="frame" x="12" y="0.0" width="390" height="57"/>
+                                <rect key="frame" x="12" y="0.0" width="351" height="57"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Tju-6u-jal">
-                                        <rect key="frame" x="16" y="5" width="358" height="47"/>
+                                    <stackView opaque="NO" contentMode="center" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tju-6u-jal">
+                                        <rect key="frame" x="16" y="5" width="319" height="47"/>
                                         <color key="backgroundColor" name="TabBarColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="47" id="2sb-jc-zGW"/>
