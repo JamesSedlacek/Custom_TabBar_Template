@@ -26,7 +26,7 @@
         <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#Configure">Configure</a></li>
         <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#Delegate">Delegate</a></li>
       </ul>
-    <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#help-and-support">Help & Support</a></li>
+    <li><a href="https://github.com/JamesSedlacek/Custom_TabBar_Template#help--support">Help & Support</a></li>
   </ul>
 </div><br><br>
 
@@ -44,7 +44,16 @@
 <div>
   <h2>About the Project</h2>
   <h3>How it works</h3>
-  <p>Explanation about how the tab bar works...</p><br>
+  <p>
+    The iPhone Screen is divided into two container views.<br>
+    The top container view contains the ViewController/View for each tab.<br>
+    The bottom container view contains the tab bar.<br><br>
+    The tab bar is a UIStackView that contains an array of Custom Tab Bar Items.<br>
+    Each tab bar item has an image, a label, & a property that stores whether or not it is selected.<br><br>
+    TabBarItemView handles Configuring new tab items, adds Tap Gestures, & Updating the UI (Animation when tapped).<br>
+    TabBarVC handles Segues between viewcontrollers.<br>
+    RootTabVC handles Tap Gestures and Creating tabs.
+  </p><br>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/MainVC.png">
 </div>
   
