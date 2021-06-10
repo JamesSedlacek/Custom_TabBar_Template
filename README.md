@@ -4,7 +4,8 @@
   <p>
     <h2>Overview</h2><br>
     This is a template app created in Xcode using Swift & Storyboards.<br>
-    Fork, Clone, or Download the code from this Repo, then have fun customizing the tab bar.
+    Fork, Clone, or Download the code from this Repo, then have fun customizing the tab bar.<br><br>
+    Feel free to create issues, pull requests, contribute, or tell me about your ideas for improvment.
   </p>
   
 </div><br>
@@ -70,23 +71,38 @@
 <div>
   <h2>How to Customize</h2><br>
   <h3>RootTabVC</h3>
-  <p>Expanation of how to edit this file</p>
+  <p>
+    This is where you will create Tabs.<br>
+    You can add or remove tabs in the tabModel array.<br>
+    Don't forget to change the tabCount in the K file.<br>
+  </p>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/RootTabVC.png"><br><br>
   
   <h3>Constants</h3>
-  <p>Expanation of how to edit this file</p>
+  <p>
+    This is where you can change the Colors, Images, tabCount, and tabs Enumeration.<br>
+  </p>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/Constants.png"><br><br>
   
   <h3>Configure</h3>
-  <p>Expanation of how to edit this file</p>
+  <p>
+    This is where all of the configuration for each Tab item is located.<br>
+    You can customize how every component looks.
+  </p>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/Configure.png"><br><br>
   
   <h3>Animation</h3>
-  <p>Expanation of how to edit this file</p>
+  <p>
+    This is where you can customize the tab bar animation.<br>
+  </p>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/Animation.png"><br><br>
   
   <h3>Delegate</h3>
-  <p>Expanation of how to edit this file</p>
+  <p>
+    Each View Controller for a tab item must have a Tab Delegate like this.<br>
+    This is how it transitions from one screen to another.<br>
+    You want to make sure it transitions to the other tabs, but not back to the same tab.<br>
+  </p>
   <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/Delegate.png">
 </div><br><br>
 
