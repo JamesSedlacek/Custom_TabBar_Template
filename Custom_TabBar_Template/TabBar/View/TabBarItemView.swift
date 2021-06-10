@@ -19,6 +19,19 @@ class TabBarItemView: UIView {
     
     // MARK: - Variables
     
+    var isSelected: Bool = false {
+        willSet {
+            self.updateUI(isSelected: newValue)
+        }
+    }
+    
+    var item: Any? {
+        didSet {
+            self.configure(self.item)
+        }
+    }
+    
+    
     static var newInstance: TabBarItemView {
         return Bundle.main.loadNibNamed(
             K.Identifiers.mainNib,
@@ -36,18 +49,6 @@ class TabBarItemView: UIView {
         self.addTapGesture()
     }
     
-    var isSelected: Bool = false {
-        willSet {
-            self.updateUI(isSelected: newValue)
-        }
-    }
-    
-    var item: Any? {
-        didSet {
-            self.configure(self.item)
-        }
-    }
-    
     // MARK: - Configure
     
     private func configure(_ item: Any?) {
@@ -63,6 +64,8 @@ class TabBarItemView: UIView {
         // MARK: - ImageView
         self.imgView.image = model.image
         self.imgView.tintColor = isSelected ? K.Colors.selected : K.Colors.unselected
+        
+        // MARK: - Handle Notch
         self.imageWidth.constant = UIDevice.current.hasNotch ? 30 : 25
         self.imageHeight.constant = UIDevice.current.hasNotch ? 30 : 25
         
