@@ -93,4 +93,7 @@
 <div>
   <h2>Help & Support</h2><br>
   <p>Feel free to contact me on LinkedIn if you need help with anything.</p>
+  <a href="https://www.linkedin.com/in/jamessedlacekjr/">
+    <img src="https://github.com/JamesSedlacek/Custom_TabBar_Template/blob/main/Images/LinkedIn.png">
+  </a>
 </div><br>
